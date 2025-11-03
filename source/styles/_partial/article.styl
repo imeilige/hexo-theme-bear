@@ -71,7 +71,7 @@
     border: 1px color-tag solid;
 
     &.checked {
-      background-image: url('/images/check.svg');
+      background-image: url('../images/check.svg');
       background-repeat: no-repeat;
     }
 
@@ -190,6 +190,64 @@
     &.headerlink, &.fancybox
       &:after, &:before
         display none
+
+.article-gallery
+  position relative
+  margin 2rem 0
+
+  @media mq-mobile
+    margin 1.5rem 0
+
+.article-gallery-photos
+  position relative
+  display flex
+  flex-direction column
+  gap 8px
+
+.article-gallery-img
+  display block
+  position relative
+  overflow hidden
+  max-width 100%
+
+  img
+    display block
+    width 100%
+    height auto
+
+.article-gallery-img--preview
+  height 50px
+
+  img
+    height 100%
+    object-fit cover
+    filter blur(8px)
+    transform scale(1.05)
+
+.article-gallery-img__sharp
+  pointer-events none
+  position absolute
+  inset 0
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  mask-image linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
+  -webkit-mask-image linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
+
+.article-gallery-more
+  pointer-events none
+  position absolute
+  inset 0
+  display flex
+  align-items center
+  justify-content center
+  padding 0 gutter-size
+  color #fff
+  font-weight 600
+  font-size .9rem
+  line-height 1.2
+  text-align center
+  background linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.7) 100%)
 
 
 .nav

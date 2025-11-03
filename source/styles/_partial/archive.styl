@@ -6,6 +6,7 @@
   box-sizing border-box
   margin gutter-size 0
   flex-basis 50%
+  min-width 0
 
   @media mq-mobile
     flex-basis 100%
@@ -21,6 +22,7 @@
   background-color color-article-background
   padding gutter-size
   display flex
+  min-width 0
   line-height line-height
   transition all .6s ease
 
@@ -34,6 +36,7 @@
 
 .post-archive__body
   flex-grow 1
+  min-width 0
   height 5rem
   overflow hidden
 
@@ -42,13 +45,19 @@
   font-weight bold
   margin-bottom .2rem
   display block
+  max-width 100%
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
 
 .post-archive__excerpt
   color color-grey
-  height 3rem
   overflow hidden
-  position relative
 
 .post-archive__excerpt-content
-  position absolute
-  width 100%
+  display -webkit-box
+  overflow hidden
+  text-overflow ellipsis
+  -webkit-box-orient vertical
+  -webkit-line-clamp 2
+  white-space normal
