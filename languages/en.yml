@@ -11,8 +11,6 @@ archive:
   empty: No archived posts.
 tag:
   empty: No posts for this tag.
-footer:
-  credits: Powered by %s, Theme %s.
 formats:
   post_date: YYYY-MM-DD
   month: MMM

@@ -11,8 +11,6 @@ archive:
   empty: アーカイブはありません。
 tag:
   empty: このタグの投稿はありません。
-footer:
-  credits: "%s によって動作、テーマ %s。"
 formats:
   post_date: YYYY年MM月DD日
   month: MM月

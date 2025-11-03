@@ -25,7 +25,7 @@ $ npm i
 
 ## Internationalization
 
-The theme now uses Hexo's built-in i18n system. Set the `language` field in your site-level `_config.yml` (e.g. `language: en` or `language: zh-CN`) and Hexo will pick the matching file from `themes/bear/languages/`. English (`en`), Simplified Chinese (`zh-CN`), and Japanese (`ja`) are bundled. To add another language, duplicate `languages/en.yml`, translate the strings, and name it after the new locale code.
+The theme now uses Hexo's built-in i18n system. Set the `language` field in your site-level `_config.yml` (e.g. `language: en` or `language: zh-CN`) and Hexo will pick the matching file from `themes/bear/languages/`. English (`en`), Simplified Chinese (`zh-CN`), Traditional Chinese (`zh-TW`), and Japanese (`ja`) are bundled. To add another language, duplicate `languages/en.yml`, translate the strings, and name it after the new locale code.
 
 ### Localizing configuration
 
@@ -46,9 +46,10 @@ The theme now uses Hexo's built-in i18n system. Set the `language` field in your
   date_format:
     en: YYYY-MM-DD
     zh-CN: YYYY年MM月DD日
+    zh-TW: YYYY年MM月DD日
     ja: YYYY年MM月DD日
   ```
-
+  
 ## Update
 
 ```shell

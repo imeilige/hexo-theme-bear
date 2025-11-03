@@ -11,8 +11,6 @@ archive:
   empty: 暂无归档内容。
 tag:
   empty: 暂无相关内容。
-footer:
-  credits: 由 %s 强力驱动，主题 %s。
 formats:
   post_date: YYYY年MM月DD日
   month: MM[月]
