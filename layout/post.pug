@@ -3,7 +3,7 @@ extends ../_partial/layout
 block content
   .container.post
     section.article
-      .title= page.title
+      .title= page.title || '未命名'
       .date 写于#{moment(page.date).format(theme.date_format)}
       .content!= page.content
       if page.tags

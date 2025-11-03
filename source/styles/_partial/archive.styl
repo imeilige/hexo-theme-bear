@@ -45,10 +45,12 @@
 
 .post-archive__excerpt
   color color-grey
-  height 3rem
   overflow hidden
-  position relative
 
 .post-archive__excerpt-content
-  position absolute
-  width 100%
+  display -webkit-box
+  overflow hidden
+  text-overflow ellipsis
+  -webkit-box-orient vertical
+  -webkit-line-clamp 2
+  white-space normal

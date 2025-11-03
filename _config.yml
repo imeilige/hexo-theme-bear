@@ -9,6 +9,7 @@ aboutme: Halo~
 
 # Content
 excerpt_link: 全文...
+excerpt_length: 160
 fancybox: true
 date_format: 'YYYY年MM月DD日'
 

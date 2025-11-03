@@ -2,16 +2,16 @@ header.container#header
   .header
     .header-left
       .avatar
-        img(src=theme.avatar)
+        img(src=url_for(theme.avatar))
       .author
         div.author-name
-          a(href="/")=theme.author
+          a(href=url_for('/'))=theme.author
         div.about-me=theme.aboutme
 
     .header-right
       ul.navigation
         each link, text in theme.menu
           li
-            a(href=link)=text
+            a(href=url_for(link))=text
             
     include ./aboutme.pug
