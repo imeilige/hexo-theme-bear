@@ -24,20 +24,23 @@ block content
           each post in postsByYear[year]
             .post-archive
               .post-archive__content
-                .post-archive__month= time(post.date, 'MM月')
+                .post-archive__month= time(post.date, monthFormat)
                 .post-archive__body
-                  a.post-archive__title(href=url_for(post.path))= post.title || '未命名'
+                  a.post-archive__title(
+                    href=url_for(post.path)
+                    title=post.title || __('common.untitled')
+                  )= post.title || __('common.untitled')
                   .post-archive__excerpt
                     - const excerptLength = theme.excerpt_length || 160;
-                    - let archiveExcerpt = post.excerpt || strip_html(post.content || '');
+                    - let archiveExcerpt = strip_html(post.excerpt) || strip_html(post.content || '');
                     - const originalExcerpt = archiveExcerpt;
                     - if (excerptLength && archiveExcerpt.length > excerptLength) {
                     -   archiveExcerpt = archiveExcerpt.substring(0, excerptLength);
                     - }
-                    .post-archive__excerpt-content(title=originalExcerpt)!= archiveExcerpt
+                    .post-archive__excerpt-content(title=originalExcerpt)!= post.excerpt || post.content
     else
       .archives
         .post-archive
           .post-archive__content
             .post-archive__body
-              span.post-archive__title 暂无归档内容。
+              span.post-archive__title= __('archive.empty')

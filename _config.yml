@@ -1,17 +1,16 @@
 # Header
 menu:
-  归档: /archives
+  archives: /archives
 rss: /atom.xml
 title: GARY.SHEN
 
 author: GARY.SHEN
 aboutme: Halo~
-
-# Content
-excerpt_link: 全文...
-excerpt_length: 160
 fancybox: true
-date_format: 'YYYY年MM月DD日'
+date_format:
+  zh-CN: 'YYYY年MM月DD日'
+  ja: 'YYYY年MM月DD日'
+  en: 'YYYY-MM-DD'
 
 socials:
   github: "https://github.com/gary-Shen"
@@ -19,15 +18,6 @@ socials:
   email: "guanlinshen@126.com"
   wechat: "Grinson"
 
-
-
-# Sidebar
-# sidebar: right
-# widgets:
-# - category
-# - tag
-# - archive
-# - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

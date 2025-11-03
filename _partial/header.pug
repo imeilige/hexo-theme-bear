@@ -10,8 +10,29 @@ header.container#header
 
     .header-right
       ul.navigation
-        each link, text in theme.menu
+        each item, key in theme.menu
+          - let href = item;
+          - let targetAttr = null;
+          - let label;
+          - if (item && typeof item === 'object') {
+          -   href = item.path || item.url || item.link || item.href || '';
+          -   targetAttr = item.target || null;
+          -   if (item.i18n) {
+          -     label = __(item.i18n);
+          -   } else if (item.label) {
+          -     label = localize_config(item.label);
+          -   }
+          - }
+          - if (!label) {
+          -   const translationKey = `menu.${key}`;
+          -   label = __(translationKey);
+          -   if (label === translationKey) {
+          -     label = typeof key === 'string' ? key : '';
+          -   }
+          - }
+          - const relAttr = targetAttr === '_blank' ? 'noopener' : null;
+          - const resolvedHref = href ? url_for(href) : '#';
           li
-            a(href=url_for(link))=text
+            a(href=resolvedHref, target=targetAttr, rel=relAttr)= label
             
     include ./aboutme.pug

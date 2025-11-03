@@ -23,6 +23,32 @@ $ npm i hexo-render-pug
 $ npm i
 ```
 
+## Internationalization
+
+The theme now uses Hexo's built-in i18n system. Set the `language` field in your site-level `_config.yml` (e.g. `language: en` or `language: zh-CN`) and Hexo will pick the matching file from `themes/bear/languages/`. English (`en`), Simplified Chinese (`zh-CN`), and Japanese (`ja`) are bundled. To add another language, duplicate `languages/en.yml`, translate the strings, and name it after the new locale code.
+
+### Localizing configuration
+
+- `menu` keys are looked up with `menu.<key>` and fall back to the key itself. You can still supply a simple path (`menu.home: /`), or use an object when you need more control:
+  ```yml
+  menu:
+    home: /
+    about:
+      path: /about
+      i18n: menu.about        # optional explicit translation key
+      label:
+        en: About
+        zh-CN: 关于
+      target: _blank          # optional target attribute
+  ```
+- `date_format`, and any custom `menu` labels accept either a string or an object keyed by locale codes. The theme picks the best match based on the current page language:
+  ```yml
+  date_format:
+    en: YYYY-MM-DD
+    zh-CN: YYYY年MM月DD日
+    ja: YYYY年MM月DD日
+  ```
+
 ## Update
 
 ```shell

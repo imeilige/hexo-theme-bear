@@ -1,5 +1,11 @@
+- const configLang = Array.isArray(config.language) ? config.language[0] : config.language;
+- const pageLang = page.lang || page.language;
+- const htmlLangSource = pageLang || configLang || 'en';
+- const htmlLang = typeof htmlLangSource === 'string' && htmlLangSource ? htmlLangSource : 'en';
+- const themeDateFormat = localize_config(theme.date_format, 'formats.post_date');
+- const monthFormat = localize_config(theme.month_format, 'formats.month');
 doctype html
-html
+html(lang=htmlLang)
   head
     meta(charset="utf-8")
     - const pageDescriptionSource = page.description || page.excerpt || config.description;

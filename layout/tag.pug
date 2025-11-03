@@ -8,9 +8,9 @@ block content
         each post in tagPosts
           .post-archive
             .post-archive__content
-              .post-archive__month= time(post.date, 'MM月')
+              .post-archive__month= time(post.date, monthFormat)
               .post-archive__body
-                a.post-archive__title(href=url_for(post.path))= post.title || '未命名'
+                a.post-archive__title(href=url_for(post.path))= post.title || __('common.untitled')
                 .post-archive__excerpt
                   - const excerptLength = theme.excerpt_length || 160;
                   - let tagExcerpt = post.excerpt || strip_html(post.content || '');
@@ -23,4 +23,4 @@ block content
         .post-archive
           .post-archive__content
             .post-archive__body
-              span.post-archive__title 暂无相关内容。
+              span.post-archive__title= __('tag.empty')
