@@ -46,9 +46,9 @@
   // Avatar
   var $mask = $('.about-me-mask');
   $('.avatar').on('click', function () {
-    if (!$mask.hasClass('open')) {
-      $mask.addClass('open');
-    }
+  //  if (!$mask.hasClass('open')) {
+  //    $mask.addClass('open');
+  //  }
   });
 
   $mask.on('click', function (e) {
