@@ -1,6 +1,9 @@
 # Header
 menu:
+  首页: /
   archives: /archives
+  投资理财: /tags/投资理财
+
 rss: /atom.xml
 title: 日记
 
