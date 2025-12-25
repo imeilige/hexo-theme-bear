@@ -10,7 +10,7 @@ block content
       - const galleryKey = String(page._id || page.slug || page.path || page.title || Date.now())
       - const galleryShowAll = true
       include ../_partial/gallery.pug
-      .content!= page.content
+      .content.markdown-body!= page.content
       if page.tags
         .tags!= list_tags(page.tags, { show_count: false, class: 'tag', style: false, separator: '' })
 

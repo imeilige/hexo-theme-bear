@@ -7,8 +7,8 @@ menu:
 rss: /atom.xml
 title: 日记
 
-author: note
-aboutme: ~
+author: 成长复利
+aboutme: 在科技中寻找财富增长，在纸墨书香中修身，在育儿琐碎里修行, 记录关于‘成长’的一切复利
 fancybox: true
 date_format:
   zh-CN: 'YYYY年MM月DD日'
@@ -17,7 +17,7 @@ date_format:
 socials:
   github: ""
   flickr: ""
-  email: ""
+  email: "m@zhangguoli.cn"
   wechat: ""
 
 # display widgets at the bottom of index pages (pagination == 2)
