@@ -133,7 +133,7 @@
   line-height line-height
   border-bottom 1px solid #eee
   padding-bottom 5px
-
+  text-decoration none
 
 
   .home &
@@ -297,12 +297,18 @@
 .date
   color color-grey
   margin-bottom gutter-size
-
+  &:before
+        content: "📅"
+        margin-right: 6px
+        color: #6b7280
+        font-size: 14px
+       
   .home &
     margin-bottom 0
 
 .excerpt-link
   font-size 1rem
+  color #0969da
 
 .tags
   .home &
@@ -316,13 +322,14 @@
   display inline-block
   border-radius 12px
   margin-right .5rem
-  font-size 12px
+  font-size 15px
+  margin-top 5px
 
   &:last-child
     margin-right 0
 
   &:hover
-    color #0969da
+    color rgb(9, 105, 218)
 
   &:before
     color #E0E8ED
